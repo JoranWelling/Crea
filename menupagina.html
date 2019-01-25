@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menupagina</title>
+    <link rel='icon' href='favicon2.ico' type='image/x-icon'/ >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+    label.menuToggleLabel {
+      background-color: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      z-index: 1;
+      }
+      label.menuToggleLabel:hover {
+        background-color: pink;
+      }
+      input#menuToggle:checked ~ header > nav > div > label.menuToggleLabel {
+        background-color: none;
+      }
+      span.bar {
+        background: rgb(2,2,2);
+        top: 0.9em;
+        left: 0.5em;
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        border-radius: 5px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+      }
+      input#menuToggle:checked ~ header > nav > div > label.menuToggleLabel span:first-child {
+        transform-origin: 0% 0p%;
+        transform: rotate(45deg) translate(-2px, -1px);
+      }
+
+      input#menuToggle:checked ~ header > nav > div > label.menuToggleLabel span:nth-child(2) {
+
+        opacity: 0;
+
+      }
+
+      input#menuToggle:checked ~ header > nav > div > label.menuToggleLabel span:nth-child(3){
+        opacity: 1;
+        transform-origin: 0% 0%;
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+      /* input#menuToggle:checked ~ header > nav > div > label.menuToggleLabel span  {
+       opacity: 1;
+       transform: rotate(45deg) translate(10px, 15px);
+       background: #232323;
+     } */
+
+      </style>
+  </head>
+  <body>
+     <input class="checkbox" type="checkbox" id="menuToggle"/>
+    <header>
+
+        <nav role="navigation">
+          <div >
+
+            <label for= "menuToggle" class="menuToggleLabel">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </label>
+          <ul id="menu">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="wolken.jpg" download target="_blank"> Link 2</a></li>
+            <li><a href="Kolb-test.pdf" download target="_blank">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+            <li><a href="#">Link 5</a></li>
+            <li><a href="#">Link 6</a></li>
+            <li><a href="#">Link 7</a></li>
+            <li><a href="#">Link 8</a></li>
+            <li><a href="#">Link 9</a></li>
+            <li><a href="#">Link 10</a></li>
+        </ul>
+
+      </div>
+    </nav>
+    <h1 class="headerwoorden"> Woorden woorden </h1>
+    </header>
+
+    </body>
+</html>
